@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>🎙️ Web Speech Recognition in Angular</h2>
+    <button (click)="startRecognition()" [disabled]="isListening">Start Listening 🎤</button>
+    <button (click)="stopRecognition()" [disabled]="!isListening">Stop 🛑</button>
+    <select id="language" [(ngModel)]="selectedLanguage">
+        <option value="en-US" >English (US)</option>
+        <option value="en-GB" >English (UK)</option>
+        <option value="es-ES" >Español (Spain)</option>
+        <option value="fr-FR" >Français (France)</option>
+        <option value="de-DE" >Deutsch (Germany)</option>
+        <option value="hi-IN" >हिन्दी (India)</option>
+        <option value="ar-SA" >العربية (Saudi Arabia)</option>
+    </select>
+    <p>{{transcript}}</p>
+</div>
